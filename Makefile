@@ -1,4 +1,8 @@
-default: update_deps generate_protobuf build
+all: update_deps generate_protobuf install
+
+install:
+	go install ./fileformat
+	go install ./osmformat
 
 init_dir:
 	@mkdir -p osmformat fileformat
